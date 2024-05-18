@@ -5,7 +5,7 @@ services:
     build: ./src
     command: uvicorn app.main:app --reload --workers 1 --host 0.0.0.0 --port 8000
     # install requirements.txt
-    
+
     volumes:
       - ./src/:/usr/src/app/
     ports:
@@ -25,7 +25,5 @@ volumes:
   postgres_data:
 
 networks:
-  default: 
+  default:
     name: hello_fastapi
-
-

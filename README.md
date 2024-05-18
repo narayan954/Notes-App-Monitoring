@@ -19,13 +19,19 @@ Read the full tutorial [here](https://dev.to/ken_mwaura1/getting-started-with-fa
 1. Clone this Repo
 
    `git clone (https://github.com/KenMwaura1/Fast-Api-example)`
+
 2. Cd into the Fast-Api folder
 
    `cd Fast-Api-example`
+
 3. Create a virtual environment
 
    `python3 -m venv venv`
+
 4. Activate virtualenv
+
+   `.\venv\Scripts\activate`
+   For powershell users
 
    `source venv/bin/activate`
 
@@ -40,12 +46,15 @@ Read the full tutorial [here](https://dev.to/ken_mwaura1/getting-started-with-fa
    For fish users
 
    `source venv/bin/activate.fish`
+
 5. Cd into the src folder
 
    `cd src`
+
 6. Install the required packages
 
    `python -m pip install -r requirements.txt`
+
 7. Start the app
 
    ```shell
@@ -64,7 +73,7 @@ Read the full tutorial [here](https://dev.to/ken_mwaura1/getting-started-with-fa
    Change the DATABASE_URL variable in the **.env** file inside then `app` folder to reflect database settings (user:password/db)
 
 9. Check the app on [notes](http://localhost:8002/notes)
-Open your browser and navigate to [docs](http://localhost:8002/docs) to view the swagger documentation for the api.
+   Open your browser and navigate to [docs](http://localhost:8002/docs) to view the swagger documentation for the api.
 
 ## Vue Frontend (Optional)
 
@@ -80,33 +89,33 @@ While inside the root folder `Fast-Api-example`
 
    ```shell
       cd vue-client
-      ```
+   ```
 
 2. Install the required dependencies.
    for NPM:
 
    ```shell
       npm install
-      ```
+   ```
 
    for Yarn:
 
    ```shell
       yarn install
-      ```
+   ```
 
 3. Start the Vue app
    for NPM:
 
    ```shell
       npm run serve
-      ```
+   ```
 
    for Yarn:
 
    ```shell
       yarn serve
-      ```
+   ```
 
 4. Open your browser and navigate to [notes](http://localhost:5173)
 
@@ -122,7 +131,7 @@ While inside the root folder `Fast-Api-example`
 
 4. Change into the directory
 
-   ```cd Fast-Api-example```
+   `cd Fast-Api-example`
 
 5. Use Docker-Compose to spin up containers
 

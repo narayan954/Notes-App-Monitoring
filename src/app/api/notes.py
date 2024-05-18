@@ -23,7 +23,9 @@ async def create_note(payload: NoteSchema):
 
 
 @router.get("/{id}/", response_model=NoteDB)
-async def read_note(id: int = Path(..., gt=0), ):
+async def read_note(
+    id: int = Path(..., gt=0),
+):
     note = await crud.get(id)
     if not note:
         raise HTTPException(status_code=404, detail="Note not found")
@@ -36,7 +38,9 @@ async def read_all_notes():
 
 
 @router.put("/{id}/", response_model=NoteDB)
-async def update_note(payload: NoteSchema, id: int = Path(..., gt=0)):  # Ensures the input is greater than 0
+async def update_note(
+    payload: NoteSchema, id: int = Path(..., gt=0)
+):  # Ensures the input is greater than 0
     note = await crud.get(id)
     if not note:
         raise HTTPException(status_code=404, detail="Note not found")
@@ -84,5 +88,3 @@ async def read_note_by_description(description: str):
 @router.get("/date/{created_date}/", response_model=List[NoteDB])
 async def read_note_by_date(created_date: str):
     return await crud.get_by_date(created_date)
-
-
